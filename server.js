@@ -1,5 +1,3 @@
-const path = require("path");
-
 const WebSocket = require("ws");
 const fs = require("fs");
 
@@ -9,7 +7,7 @@ chatSocket.addEventListener("open", (event) => {
   const message = {
     type: "join",
     data: {
-      channel_id: "5",
+      channel_id: "137757",
       hidden: false,
     },
   };
