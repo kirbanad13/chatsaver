@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "node-fetch": "^2.6.9",
     "ws": "^8.13.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "goodgame",
+  "version": "1.0.0",
+  "main": "chat-script.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
