@@ -1,12 +1,11 @@
 const WebSocket = require("ws");
 const fs = require("fs");
-const fetch = require("node-fetch");
 const { spawn } = require("child_process");
 
 const args = process.argv.slice(2);
 
-const currentChannel = args[0].toLowerCase();
-const secondArg = args[1].toLowerCase();
+const currentChannel = args[0];
+const secondArg = args[1];
 
 const channels = {
   arrowwood: 137757,
@@ -22,8 +21,7 @@ if (secondArg === "vod") {
 
 function saveVOD() {
   const fileName = createDateTime() + "_vod.ts";
-  const argsString =
-    "--hls-segment-stream-data --hls-live-edge=1 --retry-streams 5 --retry-max 0 --retry-open 100000 --hls-timeout 60";
+  const argsString = "--retry-streams 5 --retry-max 0 --retry-open 100000";
   const args = argsString.split(" ");
   let child = spawn("streamlink", [
     ...args,
