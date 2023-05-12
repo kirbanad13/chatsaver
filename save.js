@@ -11,6 +11,7 @@ const channels = {
   arrowwood: 137757,
   k0kcakep: 199261,
   archiedos: 187877,
+  yartzev88: 86028
 };
 
 saveChat();
